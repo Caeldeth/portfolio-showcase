@@ -24,33 +24,41 @@
 /* header format */
 
 header {
+    padding: 20px 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     background-color: var(--secondary-color);
     padding-bottom: 10px;
+    width: 100vw;
+    max-width: 100%;
+    align-items: center;
 }
 
-header h1{
-    display: flex;
-    position: center;
-    margin: 0;
-    font-size: 48px;
+header img {
+    height: 75px;
+    width: 80px;
+}
+
+header h1 {
+    font-size: 3vw;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: var(--outline-color);
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-left: 20px;
+    margin-left: 10px;
 }
 
-header nav ul{ 
+header nav {
+    margin-left: auto;
+}
+
+
+header nav ul { 
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
-    list-style: none;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    list-style: none;
 }
 
 header nav ul li {
@@ -94,11 +102,13 @@ header nav ul li a:hover {
     justify-content: flex-end;
     position: relative;
     background-color: rgb(2, 63, 99,.6);
-    font-size: 36px;
+    font-size: 2vw;
     margin-left: 81%;
-    padding-right: 40px;
+    padding-right: 2%;
     left: -20px;
     top: -80px;
+    right: 20px;
+    bottom: 20px;
     color: var(--font-color-dark);
 }
 
