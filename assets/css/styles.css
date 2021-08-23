@@ -52,7 +52,6 @@ header nav {
     margin-left: auto;
 }
 
-
 header nav ul { 
     display: flex;
     flex-wrap: wrap;
@@ -87,6 +86,9 @@ header nav ul li a:hover {
 
 .hero {
     background-color: var(--background-color);
+    background-size: contain;
+    position: relative;
+    text-align: center;
 }
 
 .hero img {
@@ -102,15 +104,14 @@ header nav ul li a:hover {
     justify-content: flex-end;
     position: relative;
     background-color: rgb(2, 63, 99,.6);
-    font-size: 2vw;
-    margin-left: 81%;
-    padding-right: 2%;
-    left: -20px;
-    top: -80px;
-    right: 20px;
-    bottom: 20px;
+    font-size: 3vw;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     color: var(--font-color-dark);
 }
+
+/* main styling begins */
 
 main {
     color: var(--font-color);
@@ -118,17 +119,144 @@ main {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-article img {
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+main section h2 {
+    padding-left: 20px;
+    padding-right: 5px;
+    width: 10%;
+}
+
+main section article {
+    padding-left: 30px;
+    padding-right: 5px;
+    border-left: solid;
+    border-left-color: var(--box-color);
+    width: 85%;
+}
+
+main section article p {
+    padding-bottom: 10px;
+}
+
+main section article figure {
     background-size: contain;
-    max-width: 100%;
-    width: 50%;
-    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+main section article figure img {
+    width: 100%;
+    height: 500px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--box-color);
+}
+
+main section article figure a img:hover {
+    opacity: 0.5;
+    filter: brightness(100%);
+    border-color: var(--hover-link-color);
+}
+
+main section article figure figcaption{
+    position: absolute;
+    bottom: 10px;
+    background-color: var(--outline-color);
+    padding-left: 40px;
+    padding-right: 10px;
+    margin-left: 3px;
+    text-align: right;
+    color: silver;
+}
+
+main section article div {
+    margin-top: 40px;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+main section article div figure img {
+    height: 250px;
+    width: 40vw;
+}
+
+/* Contact Me Styling */
+
+#contact-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.25vw;
+    width: 85%;
+}
+
+#contact-block p {
+    border-bottom: solid;
+    border-color: var(--box-color);
+    border-width: 3px;
+}
+
+#contact-block p a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+#contact-block p a:visited {
+    color: var(--font-color);
+}
+
+#contact-block p a:hover {
+    color: var(--hover-link-color);
 }
 
 
-/* @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--background-color-dark);
-        color: var(--font-color-dark);
+/* footer styling */
+
+footer {
+    background-color: var(--background-color);
+}
+
+
+/* media query for non-desktop widescreen, including mobile */
+@media screen and (max-width: 900px) {
+    header nav ul {
+        flex-direction: column;
     }
-} */
+
+    header nav ul li{
+        margin-top: .5vw;
+    }
+
+    main section {
+        flex-direction: column;
+    }
+
+    main section h2 {
+        width: 90%;
+    }
+
+    main section article {
+        border-left: none;
+        border-top: solid;
+        width: 90%;
+        padding-top: 10px;
+    }
+
+    #contact-block {
+        font-size: 2vw;
+    }
+
+    #contact-block p {
+        margin-top: 20px;
+    }
+}
