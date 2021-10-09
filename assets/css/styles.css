@@ -191,6 +191,10 @@ main section article div figure img {
     width: 40vw;
 }
 
+#movie-finder {
+    margin-top: 40px;
+}
+
 /* Contact Me Styling */
 
 #contact-block {
